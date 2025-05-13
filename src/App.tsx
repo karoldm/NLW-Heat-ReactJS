@@ -11,7 +11,9 @@ export function App() {
   return (
     <main className={`${styles.contentWrapper} ${!!user ? styles.contentSigned : " "}`}>
       <MessageList />
-      {!!user ? <SendMessageForm /> : <LoginBox />}
+      <div className={`${styles.background}`}>
+        {!!user ? <SendMessageForm /> : <LoginBox />}
+      </div>
     </main>
   );
 }
